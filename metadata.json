@@ -1,0 +1,8 @@
+{
+  "name": "Weather & Secret Chat",
+  "description": "A weather application that hides a secret Discord-like chat interface accessible via a hidden gesture.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}

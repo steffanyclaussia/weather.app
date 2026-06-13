@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyCast</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+        <style>
+        /* Custom scrollbar - Midnight Theme */
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: #0f172a; } /* slate-900 */
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; } /* slate-700 */
+        ::-webkit-scrollbar-thumb:hover { background: #6366f1; } /* indigo-500 */
+        
+        /* Latar belakang pastel fajar yang lembut (Color(0xFFE0F7FA)) */
+        .bg-pastel-dawn {
+            background: linear-gradient(135deg, #E0F7FA 0%, #B2EBF2 100%);
+        }
+
+        /* Animasi Fade In Layar Utama */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .animate-fade-in {
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        /* Animasi Awan Muncul (Pop In) */
+        @keyframes cloudPop {
+            0% { transform: scale(0); opacity: 0; }
+            70% { transform: scale(1.1); opacity: 1; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        .animate-cloud-pop {
+            animation: cloudPop 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+        }
+
+        /* Animasi Matahari Terbit */
+        @keyframes sunRise {
+            0% { transform: translateY(150px) scale(0.5); opacity: 0; }
+            20% { transform: translateY(150px) scale(0.5); opacity: 0; }
+            60% { transform: translateY(-20px) scale(1.1); opacity: 1; }
+            100% { transform: translateY(0) scale(1); opacity: 1; }
+        }
+        
+        /* Animasi Kacamata Hitam (Muncul di detik 2.5) */
+        @keyframes glassesPop {
+            0%, 85% { transform: translate(-50%, -50%) scale(0); opacity: 0; }
+            92% { transform: translate(-50%, -50%) scale(1.2); opacity: 1; }
+            100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+        }
+
+        /* Animasi Awan Menggemaskan */
+        @keyframes cloudDrift1 {
+            0%, 100% { transform: translate(0px, 0px); }
+            50% { transform: translate(-15px, 8px); }
+        }
+        @keyframes cloudDrift2 {
+            0%, 100% { transform: translate(0px, 0px); }
+            50% { transform: translate(15px, -8px); }
+        }
+        
+        /* Efek Kursor Mesin Tik */
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        .animate-sun-rise {
+            /* Diperpanjang menjadi 2.5s */
+            animation: sunRise 2.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+        }
+        .animate-glasses {
+            /* Diperpanjang menjadi 2.6s, kacamata pop up di akhir animasi (sekitar detik 2.5) */
+            animation: glassesPop 2.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+        }
+        .animate-cloud-drift-1 {
+            animation: cloudDrift1 4s ease-in-out infinite;
+        }
+        .animate-cloud-drift-2 {
+            animation: cloudDrift2 5s ease-in-out infinite;
+            animation-delay: 1s;
+        }
+        .typewriter-cursor {
+            display: inline-block;
+            width: 2px;
+            height: 1.2em;
+            background-color: #607D8B; /* Blue Grey */
+            vertical-align: middle;
+            margin-left: 2px;
+            animation: blink 0.8s infinite;
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="module" src="./index.tsx"></script>
+<script type="module" src="/index.js"></script></body>
+</html>
