@@ -66,7 +66,7 @@ SkyCast adalah aplikasi web dua lapisan yang menyembunyikan platform chat rahasi
 | Nama | NPM | Peran |
 |---|---|---|
 | Steffany Claussia Fernanda| [npm] | [peran] |
-| Laudya Meitaneia | [npm] | [peran] |
+| Laudya Meitaneia Sianturi| [npm] | [peran] |
 | Adrian Veda Dermawan| [npm] | [peran] |
 | Alysha Khanza Dwi Avianti| [npm] | [peran] |
 
