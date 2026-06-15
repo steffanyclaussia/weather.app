@@ -8,7 +8,7 @@ SkyCast adalah aplikasi web dua lapisan yang menyembunyikan platform chat rahasi
 
 ## Demo
 
-🔗 [https://genai-app-weathersecretchat-1-[...].us-central1.run.app](https://genai-app-weathersecretchat-1-[...].us-central1.run.app)
+🔗 https://genai-app-weathersecretchat-1-1781340379027-91990162992.us-central1.run.app/
 
 ---
 
@@ -16,6 +16,7 @@ SkyCast adalah aplikasi web dua lapisan yang menyembunyikan platform chat rahasi
 
 **Tampilan Cuaca (Layer Publik)**
 - Informasi cuaca real-time berbasis lokasi (suhu, kelembaban, kondisi cuaca)
+- Informasi prediksi cuaca hingga 7 hari kedepan
 - Responsive di desktop maupun mobile
 - Gestur rahasia: ketuk ikon cuaca 5 kali untuk membuka layer tersembunyi
 
@@ -60,14 +61,14 @@ SkyCast adalah aplikasi web dua lapisan yang menyembunyikan platform chat rahasi
 
 ---
 
-## Tim Pengembang
+## Kelompok 7 & pembagian peran
 
 | Nama | NPM | Peran |
 |---|---|---|
 | Steffany | [npm] | [peran] |
-| Laudya | [npm] | [peran] |
-| Adrian | [npm] | [peran] |
-| Alysha | [npm] | [peran] |
+| Laudya Meitaneia Sianturi| [npm] | [peran] |
+| Adrian Veda Dermawan| [npm] | [peran] |
+| Alysha Khanza Dwi Avianti| [npm] | [peran] |
 
 ---
 
