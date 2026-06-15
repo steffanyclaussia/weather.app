@@ -1,53 +1,74 @@
-# Vertex AI Studio Frontend App with Node.js Backend
+# SkyCast — Secret Chat Application
 
-This repository contains a frontend and a Node.js backend, designed to run together.
-The backend acts as a proxy, handling Google Cloud API calls.
+> Repository ini merupakan kelanjutan dari repository sebelumnya yang dapat dilihat di (https://github.com/adriann03/simple-chatting-app).
 
-This project is intended for demonstration and prototyping purposes only.
-It is not intended for use in a production environment.
+SkyCast adalah aplikasi web dua lapisan yang menyembunyikan platform chat rahasia di balik tampilan aplikasi cuaca fungsional. Pada tampilan publik, pengguna melihat informasi cuaca real-time berbasis lokasi. Namun dengan mengetuk ikon cuaca sebanyak 5 kali lalu memasukkan PIN 4 digit, pengguna masuk ke sistem chat tersembunyi yang tampilannya menyerupai Discord.
 
-## Prerequisites
+---
 
-To run this application locally, you need:
+## Demo
 
-*   **[Google Cloud SDK / gcloud CLI](https://cloud.google.com/sdk/docs/install)**: Follow the instructions to install the SDK.
+🔗 [https://genai-app-weathersecretchat-1-[...].us-central1.run.app](https://genai-app-weathersecretchat-1-[...].us-central1.run.app)
 
-*   **gcloud Initialization**:
-    *   Initialize the gcloud CLI:
-        ```bash
-        gcloud init
-        ```
-    *   Authenticate for Application Default Credentials (needed to call Google Cloud APIs):
-        ```bash
-        gcloud auth application-default login
-        ```
+---
 
-*   **Node.js and npm**: Ensure you have Node.js and its package manager, `npm`, installed on your machine.
+## Fitur
 
-## Project Structure
+**Tampilan Cuaca (Layer Publik)**
+- Informasi cuaca real-time berbasis lokasi (suhu, kelembaban, kondisi cuaca)
+- Responsive di desktop maupun mobile
+- Gestur rahasia: ketuk ikon cuaca 5 kali untuk membuka layer tersembunyi
 
-The project is organized into two main directories:
+**Chat Rahasia (Layer Tersembunyi)**
+- Autentikasi PIN 4 digit sebagai lapisan keamanan tambahan
+- Registrasi dan login via email/password (Supabase Auth)
+- Tambah teman berdasarkan username, kirim/terima permintaan pertemanan
+- Real-time chat menggunakan Supabase Realtime (WebSocket)
+- Dark theme UI menyerupai Discord
 
-*   `frontend/`: Contains the Frontend application code.
-*   `backend/`: Contains the Node.js/Express server code to proxy Google Cloud API calls.
+---
 
-## Backend Environment Variables
+## Tech Stack
 
-The `backend/.env.local` file is automatically generated when you download this application.
-It contains essential Google Cloud environment variables pre-configured based on your project settings at the time of download.
+| Layer | Teknologi |
+|---|---|
+| Frontend | HTML5, CSS3, Vanilla JavaScript |
+| Backend / BaaS | Supabase (PostgreSQL + Auth + Realtime) |
+| Hosting | Google Cloud Run |
+| API Eksternal | OpenWeatherMap API |
 
-The variables set in `backend/.env.local` are:
-*   `API_BACKEND_PORT`: The port the backend API server listens on (e.g., `5000`).
-*   `API_PAYLOAD_MAX_SIZE`: The maximum size of the request payload accepted by the backend server (e.g., `5mb`).
-*   `GOOGLE_CLOUD_LOCATION`: The Google Cloud region associated with your project.
-*   `GOOGLE_CLOUD_PROJECT`: Your Google Cloud Project ID.
+---
 
-**Note:** These variables are automatically populated during the download process.
-You can modify the values in `backend/.env.local` if you need to change them.
+## Arsitektur Cloud (NIST SP 800-145)
 
-## Installation and Running the App
+| Komponen | Implementasi |
+|---|---|
+| **Compute** | Google Cloud Run — container Docker di-deploy otomatis via Cloud Build |
+| **Network** | HTTPS publik dengan SSL/TLS, Supabase Realtime WebSocket |
+| **Storage** | Supabase PostgreSQL — tabel `profiles`, `friendships`, `messages` |
+| **Application** | UI responsif dua lapisan (cuaca + chat tersembunyi) |
+| **Service** | REST API OpenWeatherMap, Supabase Auth & Realtime API |
 
-To install dependencies and run your Google Cloud Vertex AI Studio App locally, execute the following command:
+---
 
-```bash
-npm install && npm run dev
+## Cara Akses Chat Tersembunyi
+
+1. Buka aplikasi
+2. Ketuk ikon cuaca sebanyak **5 kali**
+3. Masukkan **PIN 4 digit**
+4. Login atau daftar akun baru
+
+---
+
+## Tim Pengembang
+
+| Nama | NPM | Peran |
+|---|---|---|
+| Steffany | [npm] | [peran] |
+| Laudya | [npm] | [peran] |
+| Adrian | [npm] | [peran] |
+| Alysha | [npm] | [peran] |
+
+---
+
+*Cloud Computing UAS 2026*
