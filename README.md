@@ -67,7 +67,7 @@ SkyCast adalah aplikasi web dua lapisan yang menyembunyikan platform chat rahasi
 |---|---|---|
 | Steffany Claussia Fernanda| [24083010026] | [buat web dan database] |
 | Laudya Meitaneia Sianturi| [24083010089] | [buat web dan database] |
-| Adrian Veda Dermawan| [24083010090] | [membuat summary] |
+| Adrian Veda Dermawan| [24083010090] | [membuat summary + video] |
 | Alysha Khanza Dwi Avianti| [24083010123] | [buat web dan database] |
 
 ---
